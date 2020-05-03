@@ -11,6 +11,7 @@ class HomeViewController: UIViewController, VNDocumentCameraViewControllerDelega
     // constants for the view controller
 //    var textRecognitionRequest = VNRecognizeTextRequest(completionHandler: nil)
     let textRecognitionWorkQueue = DispatchQueue(label: "TextRecognitionQueue", qos: .userInitiated, attributes: [], autoreleaseFrequency: .workItem)
+    let flagNext = false
     
 
     override func viewDidLoad() {
@@ -36,6 +37,9 @@ class HomeViewController: UIViewController, VNDocumentCameraViewControllerDelega
         configureDocumentView()
     }
     
+    @IBAction func NextPressed(_ sender: Any) {
+    }
+    
     func setUpElements () {
         // Utilities.styleFilledButton(signUpButton)
         // Utilities.styleFilledButton(logInButton)
@@ -47,7 +51,6 @@ class HomeViewController: UIViewController, VNDocumentCameraViewControllerDelega
         documentCameraViewController.delegate = self
         present(documentCameraViewController, animated: true, completion: nil)
     }
-    
     
     // PARSING IMAGES
     var textRecognitionRequest = VNRecognizeTextRequest { (request, error) in
@@ -153,6 +156,9 @@ extension HomeViewController {
             self.recognizeTextInImage(image)
         }
         controller.dismiss(animated:true, completion: nil)
+        
+        // move to the next view controller
+//        flagNext = true
     }
 }
 

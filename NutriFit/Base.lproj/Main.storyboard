@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BnU-qn-1Kf">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -268,6 +268,17 @@
                                     <action selector="scan:" destination="RL7-wD-RiZ" eventType="touchUpInside" id="u1P-PM-ana"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a4Z-4p-UoK" colorLabel="IBBuiltInLabel-Gray">
+                                <rect key="frame" x="307" y="679" width="39" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="NEXT">
+                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="NextPressed:" destination="RL7-wD-RiZ" eventType="touchUpInside" id="cJy-Sb-esK"/>
+                                    <segue destination="U7I-cf-kBo" kind="show" id="QEd-wS-8rR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="UMw-5X-SsF"/>
@@ -277,12 +288,12 @@
             </objects>
             <point key="canvasLocation" x="2521.739130434783" y="137.94642857142856"/>
         </scene>
-        <!--Data View Controller-->
+        <!--Data View Controller1-->
         <scene sceneID="AMI-OU-m3B">
             <objects>
-                <viewController storyboardIdentifier="DataViewController" id="U7I-cf-kBo" customClass="DataViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DataViewController" id="U7I-cf-kBo" customClass="DataViewController1" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Er5-A5-8Jb">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Top banner for data" translatesAutoresizingMaskIntoConstraints="NO" id="896-cT-VYV">
@@ -293,6 +304,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="ki0-Ug-KGL"/>
                     </view>
+                    <navigationItem key="navigationItem" id="bsG-dD-5la"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nBk-Zh-AcV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
